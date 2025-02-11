@@ -1,0 +1,105 @@
+
+.popup-tint {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    transition: 0.3s;
+}
+
+.popup-hidden {
+    bottom: -150% !important;
+    transition: 0.3s;
+}
+
+.popup-tint-hidden {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: 0.3s;
+}
+
+.vip-popup, .coins-popup {
+    position: fixed;
+    bottom: 0;
+    border-radius: 24px;
+    margin: 16px;
+    padding: 16px;
+    background: var(--surface-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 6px;
+    transition: 0.2s;
+}
+
+.vip-popup__icon > img, .coins-popup__icon > img {
+    width: 64px;
+    height: 64px;
+}
+
+.vip-popup__title, .coins-popup__title {
+    line-height: 120%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.vip-popup__subtitle, .coins-popup__subtitle {
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--dark-gray-text-color);
+}
+
+.coins-popup__subtitle {
+    margin-bottom: 8px;
+}
+
+.vip-popup__coins, .coins-popup__coins {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.vip-popup__coins > img {
+    width: 20px;
+    height: 20px;
+}
+
+.vip-popup__coins-coins {
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+.vip-popup__desc, .coins-popup__desc {
+    line-height: 130%;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.vip-popup__btn, .coins-popup__btn {
+    color: var(--light-text-color);
+    background: var(--accent-color);
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.popup-cross {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 48px;
+    width: 48px;
+}
+

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/region.css">
+    <link rel="stylesheet" href="static/css/description.css">
+    <link rel="stylesheet" href="static/css/popup.css">
+    <link rel="stylesheet" href="static/css/cart.css">
+    <link rel="icon" type="image/png" href="static/img/favicon.ico" >
+    <title>БШ бот</title>
+</head>
+<body id="body" style="transition: height 0.3s;">
+    <!-- page start -->
+    <div class="page">
+        <!-- header start -->
+        <div class="header">
+            <div class="header__left">
+                <div class="header__user-icon">
+                    <img src="#" alt="" class="user-icon">
+                </div>
+                <div class="header__user-info">
+                    <div class="user-info__name">Username</div>
+                    <div class="user-info__coins coin">
+                        <span class="user-coins">50</span> <img src="static/img/coin.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__right">
+                <div class="header__region-number">
+                    <div class="region-number">77 регион</div><img src="static/img/pencil.svg" alt="">
+                </div>
+                <div class="header__region-name">Москва</div>
+            </div>
+        </div>
+        <!-- header end -->
+
+        <!-- vip block start -->
+        <div class="vip">
+            <div class="vip__head">
+                <div class="vip__title">VIP-вход</div>
+                <div class="vip__btn">
+                    Приобрести <img src="static/img/arrow-right.svg" alt="">
+                </div>
+            </div>
+            <div class="vip__body">
+                Текст описания на несколько строк какой-то я не зхнаю пока что какой 
+                это только рыба-текст аа а а вроывть ваапросм sdhyjs
+            </div>
+        </div>
+        <!-- vip block end -->
+
+        <!-- search block start -->
+        <div class="search">
+            <div class="search__input">
+                <img src="static/img/search.svg" alt="">
+                <input type="text" class="search-input" placeholder="Название предмета">
+                <img src="static/img/cross.svg" alt="" class="display-none input-cross">
+            </div>
+            <div class="search__dates">
+
+                <!-- dates here -->
+
+                <div class="space-fix"></div>
+            </div>
+        </div>
+        <!-- search block end -->
+
+        <!-- catalog block start -->
+        <div class="catalog">
+
+            <!-- catalog items here -->
+
+            <div class="space-fix-3"></div>
+        </div>
+        <!-- catalog block end -->
+        <div class="space-fix-bottom"></div>
+    </div>
+    <!-- page end -->
+
+    <!-- cart start -->
+    <div class="cart display-none">
+        <div class="cart-wrapper">
+            <div class="cart__title">Корзина</div>
+
+            <!-- cart items start -->
+            <div class="cart__items">
+
+                <!-- cart items here -->
+
+            </div>
+            <!-- cart items end -->
+
+            <div class="cart__sep"></div>
+
+            <div class="cart__promo cart__surface">
+                <div class="promo__title">Промокод</div>
+                <div class="promo__bottom">
+                    <div class="promo__input-wrapper">
+                        <input class="promo__input" type="text" name="promo" id="" placeholder="Введите промокод">
+                        <div class="promo__input-right">
+                            <div class="promo__input-sale">-20%</div>
+                            <img class="promo__input-cross" src="static/img/cart_cross.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="promo__btn promo__btn_hidden">Применить</div>
+                </div>
+                <div class="promo__error display-none">
+                    Промокод не существует
+                </div>
+            </div>
+
+            <div class="cart__coins cart__surface">
+                <div class="cart-coins__left coin">
+                    <div class="cart-coins__top">
+                        Списать баллы
+                        <img src="static/img/coin.svg" alt="">
+                        <span class="cart-coins__coins coins-pass-amount">50</span>
+                    </div>
+                    <div class="cart-coins__bottom">
+                        Всего у вас <span class="coins-amount">50</span> баллов
+                    </div>
+                </div>
+                <div class="cart-coins__right">
+                    <div class="cart-coins__switch" value="0">
+                        <div class="cart-coins__switch-inner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart__order">
+            <div class="order__title">Итого</div>
+            <div class="order__list">
+                <div class="order-list__item order-price-item">
+                    <div class="order-list-item__label">
+                        Предметы (<span class="order-price-label">3</span> шт.)
+                    </div>
+                    <div class="order-list-item__value order-price">3000 ₽</div>
+                </div>
+                <div class="order-list__item order-sale-item">
+                    <div class="order-list-item__label">
+                        Скидка
+                    </div>
+                    <div class="order-list-item__value order-sale">-100 ₽</div>
+                </div>
+                <div class="order-list__item order-promo-item">
+                    <div class="order-list-item__label">
+                        Промокод
+                    </div>
+                    <div class="order-list-item__value order-promo">-200 ₽</div>
+                </div>
+                <div class="order-list__item order-coins-sale-item">
+                    <div class="order-list-item__label">
+                        Скидка баллами
+                    </div>
+                    <div class="order-list-item__value order-coins-sale">-50 ₽</div>
+                </div>
+                <div class="order-list__item order-coins-item">
+                    <div class="order-list-item__label">
+                        Баллы к начислению
+                    </div>
+                    <div class="order-list-item__value"><span class="order-coins">+150</span>
+                    <img src="static/img/coin.svg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="order-sep"></div>
+
+            <div class="order__topay">
+                <div class="topay__title">
+                    К оплате
+                </div>
+                <div class="topay__price">
+                    2 650 ₽
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cart end -->
+
+    <!-- region block start -->
+    <div class="region">
+        <div class="region-search">
+            <div class="region-search__input">
+                <img src="static/img/search.svg" alt="">
+                <input type="text" class="region-search-input" placeholder="Введите номер региона">
+                <img src="static/img/cross.svg" alt="" class="display-none region-input-cross">
+            </div>
+        </div>
+        <div class="region-content">
+            <!-- regions here -->
+        </div>
+    </div>
+    <!-- region block end -->
+
+    <!-- description block start -->
+    <div class="desc">
+        <div class="desc__wrapper">
+
+            <div class="desc__image">
+                <img src="static/img/subjects/history.png" alt="" class="desc-image__image">
+            </div>
+            <div class="desc__subject">
+                ОГЭ: Истроия
+            </div>
+            <div class="desc__price">
+                <div class="desc-price__price desc-price__price-w-sale">900 ₽</div> 
+                <div class="desc-price__sale">
+                    <div class="desc-price__percent">-10%</div>
+                    <div class="desc-price__old-price">1000 ₽</div>
+                </div>
+            </div>
+            <div class="desc__coins coin">
+                <span class="desc-coins__coins">+50</span> 
+                <img src="static/img/coin.svg" alt=""> бaллов 
+                <span class="desc-coins__percent">(5%)</span>
+            </div>
+            <div class="desc__dates">
+                <div class="decs-dates__label desc__label">Дата экзамена:</div>
+                <div class="desc-dates__dates">
+                    <div class="desc-dates__date-item desc-date__selected">30 мая</div>
+                    <div class="desc-dates__date-item">31 мая</div>
+                </div>
+            </div>
+            <div class="desc__region">
+                <div class="desc-region__label desc__label">Регион:</div>
+                <div class="desc-region__region">
+                    <span class="desc-region__region-text">77, Москва</span><img src="static/img/pencil.svg" alt="">
+                </div>
+            </div>
+            <div class="desc__desc">
+                <div class="desk-desc__label desc__label">Описание:</div>
+                <div class="desc-desc__desc">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- description block end -->
+
+    <div class="popup-tint popup-tint-hidden">
+    </div>
+
+    <div class="vip-popup popup-hidden">
+        <div class="vip-popup__icon">
+            <img src="static/img/vip_logo.png" alt="">
+        </div>        
+        <div class="vip-popup__title">
+            VIP-вход
+        </div>
+        <div class="vip-popup__subtitle">
+            Все предметы разом
+        </div>
+        <div class="vip-popup__coins">
+            <div class="vip-popup__coins-coins">
+                +500
+            </div>
+            <img src="static/img/coin.svg" alt="">
+        </div>
+        <div class="vip-popup__desc">
+            Текст описания на несколько строк какой-то я не зхнаю пока что какой это 
+            только рыба-текст аа а а вроывть ваапросм sdhyjs
+        </div>
+        <div class="vip-popup__btn">
+            Купить за 1 000 ₽
+        </div>
+
+        <img src="static/img/popup_cross.svg" alt="" class="vip-popup-cross popup-cross">
+    </div>
+
+    <div class="coins-popup popup-hidden">
+
+        <div class="coins-popup__icon">
+            <img src="static/img/coin_logo.png" alt="">
+        </div>        
+        <div class="coins-popup__title">
+            Баллы БШ
+        </div>
+        <div class="coins-popup__subtitle">
+            1 балл = 1 ₽
+        </div>
+        <div class="coins-popup__desc">
+            Баллы начисляются за любые покупки в боте БШ. Баллы можно потратить
+            на любую следующую покупку и оплатить ими до 100% от стоимости заказа. 
+        </div>
+        <div class="coins-popup__btn">
+            Понятно
+        </div>
+
+        <img src="static/img/popup_cross.svg" alt="" class="coins-popup-cross popup-cross">
+    </div>
+
+
+</body>
+    <script src="static/js/init.js" type="module"> </script>
+</html>
